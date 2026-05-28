@@ -1,0 +1,61 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4; 
+    color: black;
+    margin: 0; 
+}
+
+
+.top-nav {
+    background-color: white;
+    text-align: center;
+    padding: 20px; 
+    border-bottom: 2px solid #cccccc; 
+}
+
+
+.top-nav a {
+    text-decoration: none; 
+    color: black;
+    font-size: 18px;
+}
+
+
+.container {
+    background-color: white;
+    width: 80%; 
+    max-width: 800px; 
+    margin: 40px auto; 
+    padding: 30px;
+    border: 1px solid #cccccc; 
+}
+
+
+
+.intro {
+    text-align: center; 
+}
+
+
+.btn-book {
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none; 
+    display: inline-block; 
+    margin-top: 20px;
+}
+
+
+.diensten-sectie {
+    margin-top: 40px;
+    border-top: 2px solid #eeeeee; 
+    padding-top: 20px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    color: gray;
+}
