@@ -3,7 +3,8 @@ include 'connect.php';
 
 
 $stmt = $conn->prepare("SELECT * FROM reservering");
-$stmt->execute();
+$result = $stmt->execute();
+$reserveringen = $stmt->fetchAll(PDO::FETCH_ASSOC);
 ?>
 
 <!DOCTYPE html>
@@ -16,7 +17,7 @@ $stmt->execute();
 
     <header class="top-nav">
         <div class="nav-container">
-            <h1>Kapsalon Studio</h1>
+            <h1>Kapsalon</h1>
             <nav>
                 <a href="index.php">Home</a>
             </nav>
@@ -29,7 +30,31 @@ $stmt->execute();
             <h2>Welkom bij de kapper</h2>
             <p>Hier kan je je afspraak plannen om geknipt te worden.</p>
             <br>
-            <a href="#" class="btn-book">Plan hier later je afspraak in</a>
+            <a href="reserveren.php" class="btn-book">Plan je afspraak in</a>
+        </section>
+
+        <section>
+            <table>
+                <tr>
+                    <th>Datum & Tijd</th>
+                    <th>Behandeling</th>
+                    <th>Naam</th>
+                    <th>Email</th>
+                    <th>Telefoonnummer</th>
+                </tr>
+            <?php
+
+            foreach ($reserveringen as $reservering) {
+                echo "<tr>";
+                echo "<td>" . $reservering['datum'] . " " . $reservering['tijd'] . "</td>";
+                echo "<td>" . $reservering['Soort'] . "</td>";
+                echo "<td>" . $reservering['naam'] . "</td>";
+                echo "<td>" . $reservering['email'] . "</td>";
+                echo "<td>" . $reservering['tel_nr'] . "</td>";
+                echo "</tr>";
+            }
+            ?>
+            </table>
         </section>
 
         <section class="diensten-sectie">
