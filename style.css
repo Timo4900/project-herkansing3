@@ -70,3 +70,24 @@ footer {
         padding: 15px;
     }
 }
+
+.reserveren-form {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.reserveren-form label {
+    font-weight: bold;
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+.reserveren-form input, 
+.reserveren-form select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
