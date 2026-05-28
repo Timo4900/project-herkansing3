@@ -20,6 +20,7 @@ $reserveringen = $stmt->fetchAll(PDO::FETCH_ASSOC);
             <h1>Kapsalon</h1>
             <nav>
                 <a href="index.php">Home</a>
+                <a href="admin.php">Admin</a>
             </nav>
         </div>
     </header>
@@ -38,19 +39,16 @@ $reserveringen = $stmt->fetchAll(PDO::FETCH_ASSOC);
                 <tr>
                     <th>Datum & Tijd</th>
                     <th>Behandeling</th>
-                    <th>Naam</th>
-                    <th>Email</th>
-                    <th>Telefoonnummer</th>
                 </tr>
             <?php
 
             foreach ($reserveringen as $reservering) {
+                $datum = date('d-m', strtotime($reservering['datum']));
+                $tijd = date('H:i', strtotime($reservering['tijd']));
+   
                 echo "<tr>";
-                echo "<td>" . $reservering['datum'] . " " . $reservering['tijd'] . "</td>";
+                echo "<td>" . $datum . " " . $tijd . "</td>";
                 echo "<td>" . $reservering['Soort'] . "</td>";
-                echo "<td>" . $reservering['naam'] . "</td>";
-                echo "<td>" . $reservering['email'] . "</td>";
-                echo "<td>" . $reservering['tel_nr'] . "</td>";
                 echo "</tr>";
             }
             ?>
