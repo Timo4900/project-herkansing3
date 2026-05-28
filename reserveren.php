@@ -23,13 +23,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kapsalon Studio | Reserveren</title>
+    <title>Kapsalon| Reserveren</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <header class="top-nav">
-        <h1>Kapsalon Studio</h1>
+        <h1>Kapsalon </h1>
         <nav>
             <a href="index.php">Home</a>
         </nav>
